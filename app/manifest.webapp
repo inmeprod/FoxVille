@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "FOX-VILLE",
+  "launch_path": "/index.html",
+  "description": "Blog about music and production. Tip&Tricks. Tutorials.",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "INME",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "FOX-VILLE",
+      "description": "Blog about music and production. Tip&Tricks. Tutorials."
+    }
+  }
+}

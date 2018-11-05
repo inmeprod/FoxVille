@@ -1,0 +1,170 @@
+	Приложение (манифест)
+
+		1. Иконки для приложения и сайта
+		2. Фоновый цвет для приложения
+		3. Название для приложения
+
+
+	Блоки приложения со своими layout
+
+		1. Навбар
+		2. Чат с помощником
+		3. Обратная связь
+		4. Поиск
+
+
+	Для сайта в целом:
+	 Загрузчик
+
+	NAVBAR
+
+	<body id="body">
+	  <button id="menu"><span id="line"></span><span id="arrow"></span></button>
+	  <aside id="navbar"><span class="msg">Put your site title / menus here</span></aside>
+	  <section id="content">
+	    <h1>Top Navbar</h1>
+	    <h2>Using Jquery & css3 transforms</h2><span class="msg">Click the super cool icon up there</span>
+	  </section>
+	</body>
+
+	body {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: inherit;
+  background: #4d4d4d;
+  perspective: 600px;
+}
+body h1, body h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+body h1 {
+  top: 24px;
+  font-size: 12px;
+}
+body h2 {
+  top: 44px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+body .msg {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body.on {
+  overflow: hidden;
+}
+
+#menu {
+  z-index: 100;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 50px;
+  right: 50px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(-90deg);
+}
+#menu:hover {
+  background: #3c57dd;
+  transition: all 0.2s ease-in-out;
+}
+#menu #line {
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  left: 9px;
+  top: 19px;
+  background: white;
+}
+#menu #arrow {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 16px;
+  right: 9px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+}
+
+#menu.on {
+  transition: all 0.2s ease-in-out;
+  transform: rotate(90deg);
+}
+#menu.on:hover {
+  background: #404040;
+  transition: all 0.2s ease-in-out;
+}
+
+section {
+  position: relative;
+  width: 60vw;
+  height: 80vh;
+  padding: 10vh 20vw;
+  background: #5269e0;
+  transition: all 0.3s ease-in-out;
+}
+section .msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #3c57dd;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+section.on {
+  box-shadow: 0 5px 20px #333333;
+  border-radius: 6px;
+  cursor: zoom-out;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 50% 0;
+  transform: scale(0.8) translateY(100vh);
+}
+
+#navbar {
+  z-index: 90;
+  position: fixed;
+  width: 90vw;
+  height: 70vh;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 50% 0;
+  transform: translateX(-50%) scale(0);
+}
+#navbar .msg {
+  background: #404040;
+}
+
+#navbar.on {
+  top: 5vh;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%) scale(1);
+}
