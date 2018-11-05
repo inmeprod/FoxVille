@@ -38,5 +38,29 @@
   },
   "eslintConfig": {
     "extends": "google"
-  }
+  },
+  "name": "foxville-pwa",
+  "version": "1.0.0",
+  "description": "PWA project without using any 3rd party frameworks like a bootstrap or jQuery.",
+  "main": "gulpfile.babel.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inmeprod/FoxVille.git"
+  },
+  "keywords": [
+    "js",
+    "css",
+    "html",
+    "pwa"
+  ],
+  "author": "INME",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inmeprod/FoxVille/issues"
+  },
+  "homepage": "https://github.com/inmeprod/FoxVille#readme"
 }
