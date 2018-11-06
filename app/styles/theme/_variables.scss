@@ -18,3 +18,8 @@
   $shadow-3:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   $shadow-4:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   $shadow-5:0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+//transition
+  $fx__time-small:all .3s cubic-bezier(0.81, 0.01, 0.31, 1.01);
+  $fx__time-medium:all .5s cubic-bezier(0.81, 0.01, 0.31, 1.01);
+  $fx__time-long:all .5s cubic-bezier(0.81, 0.01, 0.31, 1.01);  

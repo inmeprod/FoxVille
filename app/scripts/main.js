@@ -50,11 +50,31 @@
       console.error('Error during service worker registration:', e);
     });
   }
-  /** This is a description of the foo function. */
+  /* Sidebar navigation show/hide with animation for hamburger button. */
   document.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.getElementById('navBtn');
+    var sidenav = document.getElementById('sidenav');
+    var navbar = document.getElementById('navbar');
+    var footer = document.getElementById('footer');
+    var content = document.getElementById('main');
+    /* toggleSide navigation */
+    /* show/hide with animation */
+    /* for hamburger button. */
+    function toggleSide() {
+      hamburger.classList.toggle('nav__menu-icon--is-active');
+      sidenav.classList.toggle('nav__sidenav--is-active');
+      navbar.classList.toggle('content__disabled');
+      footer.classList.toggle('content__disabled');
+      content.classList.toggle('content__disabled');
+      document.body.classList.toggle('content__disabled-overlay');
+    }
     hamburger.addEventListener('click', function() {
-      this.classList.toggle('nav__menu-icon--is-active');
+      toggleSide();
+    });
+    content.addEventListener('click', function() {
+      if (this.classList.contains('content__disabled')) {
+        toggleSide();
+      }
     });
   });
 })();

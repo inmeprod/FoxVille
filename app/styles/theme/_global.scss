@@ -14,6 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;	
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(245, 127, 23, 0.1));
+  transition: $fx__time-medium;
 }
 
 html,
@@ -53,11 +55,12 @@ footer p {
   margin-left: auto;
 }
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 header, main, footer {
-    flex-shrink: 0;
+  flex-shrink: 0;
+  transition: $fx__time-medium;
 }
 
 section {

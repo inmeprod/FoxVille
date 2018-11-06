@@ -7,6 +7,8 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  transition: $fx__time-medium;
+  left:0;
 }
 
 .nav-fixed {
@@ -28,7 +30,7 @@
 	padding: 16px 32px;
 	-webkit-transition: all 0.3s cubic-bezier(1, -0.01, 0.08, 1.35);
   -o-transition: all 0.3s cubic-bezier(1, -0.01, 0.08, 1.35);
-  transition: all 0.3s cubic-bezier(1, -0.01, 0.08, 1.35);	
+  transition: $fx__time-small;	
 }
 .nav__menu-icon .nav__menu-icon__line {
   width: 32px;
@@ -36,9 +38,9 @@
   background-color: $color-white;
   display: block;
   margin: 4px auto;
-  -webkit-transition: all 0.3s cubic-bezier(0.81, 0.01, 0.31, 1.01);
-  -o-transition: all 0.3s cubic-bezier(0.81, 0.01, 0.31, 1.01);
-  transition: all 0.3s cubic-bezier(0.81, 0.01, 0.31, 1.01);	
+  -webkit-transition: $fx__time-small;
+  -o-transition: $fx__time-small;
+  transition: $fx__time-small;	
   box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.3), 1px 5px 6px rgba(0, 0, 0, 0.35);
 }
 
@@ -65,4 +67,48 @@
   -ms-transform: translateX(-13px) translateY(-2px) rotate(45deg);
   -o-transform: translateX(-13px) translateY(-2px) rotate(45deg);
   transform: translateX(-13px) translateY(-2px) rotate(45deg);
+}
+.nav__sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to top, #111,#111,#111, #f57f17,#f57f17);
+    overflow-x: hidden;
+    transition: $fx__time-medium;
+    padding-top: 60px;
+}
+.nav__sidenav--is-active {
+  width:272px;
+}
+.content__disabled,
+.navbar__disabled,
+.footer__disabled {
+  transition: $fx__time-medium;
+}
+.content__disabled {
+  margin-left: -272px;
+  margin-right: 272px;
+}
+.nav__sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    transition: $fx__time-small;
+    color:$color-white;
+}
+
+.nav__sidenav a:hover {
+    color: $color-brand;
+}
+body.content__disabled-overlay {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(245, 127, 23, 0.3));
+  transition: $fx__time-medium;
+}
+@media screen and (max-height: 450px) {
+  .nav__sidenav {padding-top: 15px;}
+  .nav__sidenav a {font-size: 18px;}
 }

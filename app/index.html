@@ -39,7 +39,7 @@
   </head>
   <body>
     <header>
-      <div class="nav nav-fixed">
+      <div class="nav nav-fixed" id="navbar">
           <div class="nav__label"><a href="/"><span class="color-brand">FOX</span>VILLE</a></div>
           <div class="nav__menu-icon" id="navBtn">
               <span class="nav__menu-icon__line"></span>
@@ -47,15 +47,21 @@
               <span class="nav__menu-icon__line"></span>
           </div>
       </div>
-    </header><!-- /header -->      
-    <main>
+    </header><!-- /header -->
+    <div id="sidenav" class="nav__sidenav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>          
+    <main id="main">
       <section>
         <div class="container">
           <p>TEST</p> 
         </div>
       </section>     
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer__container__left">
           <p>footer</p> 
         </div>
@@ -63,7 +69,6 @@
           <p>footer</p> 
         </div>  
     </footer>
-
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
